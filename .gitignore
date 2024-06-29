@@ -1,0 +1,23 @@
+# Node.js related
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+
+# Vercel related build output
+.vercel
+
+# macOS related
+.DS_Store
+
+# IDE or editor specific files
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Ignore .env file in production (ensure this is set in Vercel's environment variables)
+.env.production
