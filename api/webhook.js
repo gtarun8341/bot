@@ -8,10 +8,17 @@ const fs = require('fs');
 const API_TOKEN = process.env.API_TOKEN;
 const bot = new TelegramBot(API_TOKEN);
 
+// Set the webhook URL for your bot
 bot.setWebHook(`https://bot-liart-rho.vercel.app/api/webhook`); // Replace with your Vercel URL
 
+// Log when a POST request is received
 router.post('/', (req, res) => {
+    console.log('Received POST request at /api/webhook:', req.body);
+    
+    // Process the update using the bot instance
     bot.processUpdate(req.body);
+    
+    // Respond with HTTP status 200 (OK)
     res.sendStatus(200);
 });
 
